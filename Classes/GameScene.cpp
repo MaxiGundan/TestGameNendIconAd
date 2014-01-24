@@ -98,7 +98,7 @@ void GameScene::initGame()
 
 void GameScene::setRandomNum()
 {
-	gameAnswer = ((int)(CCRANDOM_0_1()*5.0f) % 5) + 1;
+	gameAnswer = (rand() % 5) + 1;
 }
 
 void GameScene::showResults()

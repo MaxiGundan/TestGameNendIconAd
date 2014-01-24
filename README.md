@@ -71,7 +71,8 @@ Finderから、
 をフォルダごとドラッグ＆ドロップ  
 
 ## 4. 必要なframework追加
-Target-Build Phases-Link Binary With Librariesから、  
+Target-Build Phases-Link Binary With Librariesから、
+
     Security.framework
     AdSupport.framework
 の２つを追加。  
@@ -84,7 +85,8 @@ Target-Build Phases-Link Binary With Librariesから、
 のもの。一部上書きあり。Finderで間違えて「フォルダ置き換え」してしまわないように。  
 
 ## 6. ソースコードを、環境内に登録
-以下のものが無いと思うので、ドラッグ＆ドロップして環境に追加する。Copyは作らない。  
+以下のものが無いと思うので、ドラッグ＆ドロップして環境に追加する。Copyは作らない。
+ 
     Classes/GameScene.cpp
     Classes/GameScene.h
     Classes/TitleScene.cpp
@@ -100,9 +102,11 @@ Target-Build Phases-Link Binary With Librariesから、
 このゲームは、縦方向タイプなので、Xcodeのターゲット設定から、  
 Supported Interface Orientationsから、Portraitのみに設定をしておく。  
 
-また、RootViewController.mm の以下の行をPortraitに変更  
+また、RootViewController.mm の以下の行をPortraitに変更
+
     return UIInterfaceOrientationIsLandscape( interfaceOrientation );
         ↓  
+
     return UIInterfaceOrientationIsPortrait( interfaceOrientation );
 
 ## 8. ビルド実行
@@ -110,6 +114,7 @@ Runを押してビルド。
 lcurlとかlwebsocketsでリンクエラーが出る場合は、  
 たぶんもともとcocos2d-xのパスが違っているので、  
 cocos2d-xの環境内からXcodeにドラッグ&ドロップで解決できる。  
+
     cocos2d-x-2.2.2/cocos2dx/platform/third_party/ios/libraries/libcurl.a
     cocos2d-x-2.2.2/external/libwebsockets/ios/lib/libwebsockets.a
 とか  
@@ -165,10 +170,12 @@ Select root directoryのBrowseボタンから、
 
 ## 6. Android Manifestの変更
 表示方向は縦方向なので、"android:screenOrientation"を"portrait"に。
+
     android:screenOrientation="portrait"
 
 広告表示用のパーミッション登録  
 以下の2つが必要  
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
@@ -177,6 +184,7 @@ Select root directoryのBrowseボタンから、
 そこにActivity登録する事で、Nativeから広告制御できるようになっている。  
 
 TestGameNendIconAd.java の冒頭に追加
+
     public class TestGameNendIconAd extends Cocos2dxActivity{
         protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);	
@@ -190,6 +198,7 @@ Propatires - Builders から "CDT Builder"を外しておく。
 
 また、IconAdMgr.javaの中で、以下の判定を行っているので、  
 Project Build Targetは3.0(Honeycomb)以降にする。  
+
     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
 
 ただ、このコードは、  
@@ -204,8 +213,11 @@ Project - Build Project 実行
 ## 8. 実行
 Run Application でうまく動けばOK  
   
+
   
 以上です  
+
+  
   
 非常に我流ですので、  
 もしここはこうした方がいいよーとか、  
@@ -213,9 +225,13 @@ Run Application でうまく動けばOK
 メール(Maxi.Corpsあっとじーめーるどっとこむ)か、twitterにて連絡いただけるとうれしいです。  
   
   
+
   
+
   
+
   
+
   
 DLだけして帰るん？（´・ω・`）  
 ↓いつでもフォローしてくれていいねんで？  

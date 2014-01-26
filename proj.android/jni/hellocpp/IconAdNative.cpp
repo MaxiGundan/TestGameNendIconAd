@@ -3,6 +3,7 @@
 //
 //  Created by MaxiGundan H.Ishida.
 //
+//  reference: http://d.hatena.ne.jp/okahiro_p/20130109/1357731806 (おかひろさんの手法)
 //  reference: https://github.com/zaru/Cocos2DX_AdStir‎ (zaruさんの手法)
 //
 

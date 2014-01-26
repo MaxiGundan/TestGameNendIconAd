@@ -236,4 +236,4 @@ Run Application でうまく動けばOK
 DLだけして帰るん？（´・ω・`）  
 ↓いつでもフォローしてくれていいねんで？  
 twitter: https://twitter.com/MaxiGundan  
-facebook: https://www.facebook.com/Maxi.Gundan  
+blog:http://maxigundan.hatenablog.jp  

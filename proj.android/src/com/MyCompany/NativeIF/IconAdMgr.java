@@ -83,7 +83,7 @@ public class IconAdMgr {
     	}
 
     	//手動でIconViewを設定しておく
-        //(細かい配置にこだわらなければ、絶対にNendAdIconLayer使った方が楽！
+        //(細かい配置にこだわらなければ、絶対にNendAdIconLayout使った方が楽！
         // Nend SDK同梱サンプルソースやalbatrusさんのページが参考になります)
     	mIconViewArray = new NendAdIconView[NEND_ICON_NUMS];	//alloc array
     	for(int i=0; i<NEND_ICON_NUMS; i++) {
